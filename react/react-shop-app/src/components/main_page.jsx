@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SideMenu from "./sidemenu";
 import Navbar from "./navbar";
-import routes from './router';
+import routes from "./router";
 class MainPage extends Component {
   render() {
     return (
@@ -9,9 +9,7 @@ class MainPage extends Component {
         <Navbar />
         <div id="wrapper">
           <SideMenu />
-          <div id="content-wrapper">
-            {routes()}
-          </div>
+          <div id="content-wrapper">{routes()}</div>
         </div>
         <a className="scroll-to-top rounded" href="#page-top">
           <i className="fas fa-angle-up" />

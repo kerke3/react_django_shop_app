@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 class Navbar extends Component {
   render() {
     return (
@@ -23,7 +23,6 @@ class Navbar extends Component {
             </div>
           </div>
         </form>
-        
       </nav>
     );
   }

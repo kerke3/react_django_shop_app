@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 class SideMenu extends Component {
   render() {
     return (
@@ -8,6 +8,10 @@ class SideMenu extends Component {
           <Link to="home" className="nav-link" href="index.html">
             <i className="fas fa-fw fa-users" />
             <span> Home</span>
+          </Link>
+          <Link to="test" className="nav-link" href="index.html">
+            <i className="fas fa-fw fa-gear" />
+            <span> Testing</span>
           </Link>
         </li>
       </ul>

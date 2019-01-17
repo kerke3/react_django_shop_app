@@ -1,21 +1,13 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from "react";
+import { Route } from "react-router-dom";
+import Testing from "./testing";
+import Dashboard from "./dashboard";
 
 export default function router() {
   return (
     <React.Fragment>
-    <Route
-      path="/home"
-      component={() => {
-        return <h1>home</h1>;
-      }}
-    />
-    <Route
-      path=""
-      component={() => {
-        return <h1>home</h1>;
-      }}
-    />
+      <Route path="/home" component={Dashboard} />
+      <Route path="/test" component={Testing} />
     </React.Fragment>
   );
 }
