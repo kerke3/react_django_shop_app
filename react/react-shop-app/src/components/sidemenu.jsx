@@ -5,13 +5,17 @@ class SideMenu extends Component {
     return (
       <ul className="sidebar navbar-nav">
         <li className="nav-item active">
-          <Link to="home" className="nav-link" href="index.html">
+          <Link to="/home" className="nav-link" href="index.html">
             <i className="fas fa-fw fa-users" />
             <span> Home</span>
           </Link>
-          <Link to="test" className="nav-link" href="index.html">
+          <Link to="/test" className="nav-link" href="index.html">
             <i className="fas fa-fw fa-gear" />
             <span> Testing</span>
+          </Link>
+          <Link to="/users" className="nav-link" href="index.html">
+            <i className="fas fa-fw fa-users" />
+            <span> Users</span>
           </Link>
         </li>
       </ul>
