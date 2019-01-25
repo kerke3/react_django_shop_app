@@ -3,7 +3,8 @@ import _ from "lodash";
 
 class TableBody extends Component {
   renderCell = (item, column) => {
-    if (column.label === "") return item.content(item.name);
+    if (column.content) return column.content(item);
+    console.log(column.content);
     return _.get(item, column.label.toLowerCase());
   };
 
