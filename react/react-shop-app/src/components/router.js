@@ -13,6 +13,7 @@ export default function router() {
         <Route path="/test" component={Testing} />
         <Route path={"/users/:name" || "/users/new/"} component={UserForm} />
         <Route path="/users" component={Users} />
+        <Route path="/" component={Dashboard} />
       </Switch>
     </React.Fragment>
   );

@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import _ from "lodash";
+import TableBody from "./tableBody";
 
 class Table extends Component {
+  renderCell = (item, column) => {
+    if (column.content) return column.content(item);
+    console.log(column.content);
+    return _.get(item, column.label.toLowerCase());
+  };
+
   render() {
     const { columns, title, data } = this.props;
     return (
       <div className="card mb-3">
         <div className="card-header">
           <i className="fas fa-table" />
+
           {title}
         </div>
         <div className="card-body">
@@ -32,15 +40,7 @@ class Table extends Component {
                   ))}
                 </tr>
               </tfoot>
-              <tbody>
-                {data.map(item => (
-                  <tr>
-                    {columns.map(column => (
-                      <td>{_.get(item, column.label.toLowerCase())}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
+              <TableBody data={data} columns={columns} />
             </table>
           </div>
         </div>
